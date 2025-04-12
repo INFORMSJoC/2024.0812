@@ -1,0 +1,4 @@
+data/RawResults/Res_chimera_all_NN_SELBY.csv
+some_instances data/chimera_onc16.txt
+some_algorithms data/Algorithms_all_NN_SELBY
+results/Stat_chimera_all_NN_SELBY.csv

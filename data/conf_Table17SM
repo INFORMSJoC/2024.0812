@@ -1,0 +1,4 @@
+data/RawResults/Res_dimacs_all_NN.csv
+all_instances
+some_algorithms data/Algorithms_all_NN
+results/Stat_dimacs_all_NN.csv
