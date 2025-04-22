@@ -273,7 +273,7 @@ with the metric name and the other with the corresponding value $|n_d-n_a|$.
 
 # Chimera instances
 
-The instances are contained in the 1445 zipped files of the directory `<home>/data/Chimera`. These files are copied from the repository of the [MINOA](https://minoa-itn.fau.de) project, a resource that is in the public domain.
+The instances are contained in the 1445 zipped files of the directory `<home>/data/Chimera`. These files are copied from the repository of the [MINOA](https://minoa-itn.fau.de?page_id=749) project, a resource that is in the public domain.
 
 To generate new instances obtained from the above by removing the zero weighted edges and the resulting isolated nodes, do the following.
 
