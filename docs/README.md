@@ -25,8 +25,8 @@ Comprehensive instructions for creating each table and figure are detailed below
 
 Alternatively, to generate all tables and figures at once, the script `<home>/scripts/make_all.sh` can be executed:
 
-       cd <home>
-       bash scripts/make_all.sh
+        cd <home>
+        bash scripts/make_all.sh
 
 This script assumes that the `build` directory contains all necessary executables and that the `Res_DGS_all_NN.csv` file has been reconstructed according to the instructions above.
 
@@ -39,10 +39,10 @@ The names of all "interesting" instances are generated with the command
 
 where `conf_interesting` is the file with the following content:
 
-    data/RawResults/DGS_study_results.csv
-    all_instances
-    some_algorithms data/Algorithms_all
-    no_file
+        data/RawResults/DGS_study_results.csv
+        all_instances
+        some_algorithms data/Algorithms_all
+        no_file
 
 The output looks like:
 
@@ -125,7 +125,7 @@ To generate the table, use the command
         cd <home>
         build/extract -s data/summary_DGS.csv -o sparse.txt -i data/DGS_interesting.txt -d 3
         build/tablegenerator -p data/conf_Table3
-	rm -f sparse.txt
+        rm -f sparse.txt
 
 where `conf_Table3` is the file with the following content:
 
@@ -185,7 +185,7 @@ where `conf_hard` is the file with the following content:
         data/RawResults/Res_DGS_all_NN.csv
         all_instances
         some_algorithms data/Algorithms_all_NN
-	no_file
+        no_file
 
 ## Table 7 of Supplementary Material
 
@@ -264,7 +264,8 @@ For each `<sample size>` in the set {119, 264, 527, 862, 1317}, the correspondin
 section of the tables is obtained with the following commands:
 
         cd <home>
-        bash scripts/pre_sort.sh <sample_size>
+        bash scripts/pre_sort.sh
+        <sample_size>
 
 A `csv` file is produced in the directory `results` with name
 `Big_stat_<sample size>.csv` containing a table with two columns: one
@@ -272,11 +273,9 @@ with the metric name and the other with the corresponding value $|n_d-n_a|$.
 
 # Chimera instances
 
-The instances are contained in the 1445 zipped files of the directory
-`<home>/data/Chimera`.
+The instances are contained in the 1445 zipped files of the directory `<home>/data/Chimera`. These files are copied from the repository of the [MINOA](https://minoa-itn.fau.de) project, a resource that is in the public domain.
 
-To generate new instances obtained from the above by removing the zero
-weighted edges and the resulting isolated nodes, do the following.
+To generate new instances obtained from the above by removing the zero weighted edges and the resulting isolated nodes, do the following.
 
 Create a directory `data/de_chimera0`, where the new instances
 will be stored. Then enter the directory `data/Chimera` and
@@ -308,6 +307,21 @@ instances excluding those with name starting with `pga`.
 The instances are contained in the 40 zipped files of the directory
 
         <home>/data/BigTorii.
+
+They are generated with the graph generator [rudy](https://github.com/g-rinaldi/rudy).
+The first set of 20 instances from the +/-1 model is produced with the command
+
+        rudy -spinglass2pm <size> <size> 50 <seed> > t_pm_<size>_<seed>.txt
+        zip t_pm_<size>_<seed>.zip t_pm_<size>_<seed>.txt
+        rm -f t_pm_<size>_<seed>.txt
+
+while the second set of 20 instances from the Gaussian model is produced with the command
+
+        rudy -spinglass2g <size> <size> <seed> > t_g_<size>_<seed>.txt
+        zip t_g_<size>_<seed>.zip t_g_<size>_<seed>.txt
+        rm -f t_g_<size>_<seed>.txt
+
+In both cases, the command is issued for each value of `<size>` in the set {200, 250, 300, 350} and each value of `seed` in the set {144, 244, 344, 444, 544}.
 
 ## Table 7 (Table 12 of Supplementary Material)
 
@@ -386,7 +400,7 @@ from
 
 <https://www.dimacs.rutgers.edu/archive/Challenges/Seventh/Instances>
 
-choosing the files `torusg3-15.dat.gz` and `toruspm3-15-50.dat.gz`.dat`. 
+choosing the files `torusg3-15.dat.gz` and `toruspm3-15-50.dat.gz`. 
 The instances `torus_g3D_15n` and `torus_pm3D_15n` are generated from 
 `torus_g3D_15` and `torus_pm3D_15`, respectively, using the code
 `<home>/src/negate.cpp`. For example,
@@ -452,28 +466,28 @@ To generate the table, use the command
 where `conf_Table19SM` is the file with the following content:
 
         data/RawResults/Res_DGS_all_NN.csv
-	some_instances data/DGS_interesting.txt
-	some_algorithms data/Algorithms_all
-	results/Stat_DGS_all_abs.csv
+        some_instances data/DGS_interesting.txt
+        some_algorithms data/Algorithms_all
+        results/Stat_DGS_all_abs.csv
 
 ## Table 20 of Supplementary Material
 
 To generate the table, use the command
 
         cd <home>
-	build/tablegenerator -p data/conf_Table20SMa -r results/DGS_NN_best.txt -c NN-SSS -m 1
-	build/tablegenerator -p data/conf_Table20SMb -a
+        build/tablegenerator -p data/conf_Table20SMa -r results/DGS_NN_best.txt -c NN-SSS -m 1
+        build/tablegenerator -p data/conf_Table20SMb -a
 
 where `conf_Table20SMa` is the file with the following content:
 
         data/RawResults/Res_DGS_all_NN.csv
-	some_instances data/DGS_interesting.txt
-	some_algorithms data/Algorithms_all_NN
-	no_file
+        some_instances data/DGS_interesting.txt
+        some_algorithms data/Algorithms_all_NN
+        no_file
 
 and `conf_Table20SMb` is the file with the following content:
 
         data/RawResults/Res_DGS_all_NN.csv
-	some_instances results/DGS_NN_best.txt
-	some_algorithms data/Algorithms_all
-	results/Stat_DGS_all_NN_NN_best.csv
+        some_instances results/DGS_NN_best.txt
+        some_algorithms data/Algorithms_all
+        results/Stat_DGS_all_NN_NN_best.csv

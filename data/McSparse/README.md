@@ -75,7 +75,10 @@ The instance imgseg_138032 is contained in MQLib.
 
 ### mannino_k487b
 
-The data file is contained in the `<home>/data/McSparse` directory.
+This instance is downloadable from
+
+    http://bqp.cs.uni-bonn.de/library/html/mannino_k487b.html
+    
 
 ### g000981
 
