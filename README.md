@@ -1,6 +1,6 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# Introduction
+# SSS Algorithms for Max-Cut
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
@@ -21,7 +21,7 @@ https://doi.org/10.1287/ijoc.2024.0812.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
+@misc{Gentile2024,
   author =        {C. Gentile and G. Rinaldi and E. Salgado},
   publisher =     {INFORMS Journal on Computing},
   title =         {{SSS Algorithms for Max-Cut}},
