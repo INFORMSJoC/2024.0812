@@ -1,0 +1,4 @@
+data/RawResults/DGS_study_results.csv
+some_instances data/DGS_interesting.txt
+some_algorithms data/Algorithms_all
+results/Stat_DGS_study.csv

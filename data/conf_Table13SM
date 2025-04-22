@@ -1,0 +1,4 @@
+data/RawResults/Res_BigTorii_all_NN_P.csv
+some_instances data/BigTorii_g.txt
+some_algorithms data/Algorithms_all
+results/Stat_BigTorii_g_all.csv

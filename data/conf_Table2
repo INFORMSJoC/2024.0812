@@ -1,0 +1,4 @@
+data/RawResults/Res_DGS_all_NN.csv
+some_instances data/DGS_interesting.txt
+some_algorithms data/Algorithms_all_NN
+results/Stat_DGS_all_NN.csv
